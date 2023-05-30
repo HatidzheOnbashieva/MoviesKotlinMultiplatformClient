@@ -1,0 +1,21 @@
+CREATE TABLE movieEntity (
+    movieId INTEGER NOT NULL,
+    movieName TEXT NOT NULL,
+    movieOverview TEXT NOT NULL,
+    movieGenre TEXT NOT NULL,
+    movieImageUrl TEXT NOT NULL
+);
+
+getAllMovies:
+SELECT *
+FROM movieEntity;
+
+
+insertMovie:
+INSERT OR REPLACE
+INTO movieEntity(movieId, movieName, movieOverview, movieGenre, movieImageUrl)
+VALUES(?,?,?,?,?);
+
+deleteAllMovies:
+DELETE
+FROM movieEntity;
